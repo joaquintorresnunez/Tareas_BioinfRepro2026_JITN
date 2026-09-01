@@ -1,4 +1,4 @@
-# Tarea Sesión 
+# Tarea Sesión 1.2
 Joaquín Ignacio Torres Núñez
 
 **_Bioinformatica y analisis genómicos reproducibles_**
