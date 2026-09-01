@@ -308,8 +308,7 @@ Respuesta: Acorde a lo solicitado se genera el repositorio llamado [Tareas_Bioin
 
 ## **Ejercicio Agrégme a mi como colaborador en el repositorio de tareas del curso que creaste en tu cuenta de Github. Mi nobre de usuario es "ravuch"**
 
-Respuesta:
-![alt text](<Captura desde 2026-08-30 16-36-25.png>)
+Respuesta:Comaprtido a @ravuch
 
 ## **Ejercicio: Mira el siguiente script (tomado del manual de Stacks) y contesta lo siguiente:**
 
