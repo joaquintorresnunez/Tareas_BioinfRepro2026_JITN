@@ -302,15 +302,15 @@ Ya está actualizado.
 joaquin@joaquin-Victus-by-HP-Laptop-16-d0xxx:~/Escritorio/BioinfinvRepro$ git merge
 ```
 
-## **Ejercicio Genera un repositorio dentro de tu cuenta de Github que se llame "Tareas_BioinfRepro2019_TusIniciales".**
+## **Ejercicio 4: Genera un repositorio dentro de tu cuenta de Github que se llame "Tareas_BioinfRepro2019_TusIniciales".**
 
 Respuesta: Acorde a lo solicitado se genera el repositorio llamado [Tareas_BioinfRepro2019_JITN](https://github.com/joaquintorresnunez/Tareas_BioinfRepro2019_JITN)
 
-## **Ejercicio Agrégme a mi como colaborador en el repositorio de tareas del curso que creaste en tu cuenta de Github. Mi nobre de usuario es "ravuch"**
+## **Ejercicio 5:  Agrégeme a mi como colaborador en el repositorio de tareas del curso que creaste en tu cuenta de Github. Mi nobre de usuario es "ravuch"**
 
 Respuesta:Comaprtido a @ravuch
 
-## **Ejercicio: Mira el siguiente script (tomado del manual de Stacks) y contesta lo siguiente:**
+## **Ejercicio 6: Mira el siguiente script (tomado del manual de Stacks) y contesta lo siguiente:**
 
 1. ¿Cuántos pasos tiene este script?
     - Align with GSnap and convert to BAM
@@ -395,7 +395,7 @@ done
 ``` 
 
 
-## **Ejercicio: retoma el ejercicio anterior y divídelo en un subscript para cada paso y un script maestro que corra toda la pipeline.**
+## **Ejercicio 7: retoma el ejercicio anterior y divídelo en un subscript para cada paso y un script maestro que corra toda la pipeline.**
 
 ##Este script alinea las lecturas de secuenciación de cada muestra contra un genoma de referencia usando GSnap y Samtools. A continuación, procesa los alineamientos mediante Stacks para identificar loci genómicos y detectar SNPs. Calcula estadísticas de genética de poblaciones.
 
