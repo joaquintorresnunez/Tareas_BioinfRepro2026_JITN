@@ -1,7 +1,7 @@
 # Tareas_BioinfRepro2026_JITN
-Este github es un repositorio de las tareas a impartir en el curso de Bioinformática e investigación reproducible para análisis genómicos. 
+This GitHub repository contains the assignments for the course Bioinformatics and Reproducible Research for Genomic Analysis. The assignments are organized into folders.
 
-Segundo semestre año 2026, Doctorado en Ciencias Biomédicas
+Second semester 2026, PhD in Biomedical Sciences.
 
 
 
