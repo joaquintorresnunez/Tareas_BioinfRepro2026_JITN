@@ -1,7 +1,9 @@
-# Tarea Sesión 1.2
-Joaquín Ignacio Torres Núñez
-
-**_Bioinformatica y analisis genómicos reproducibles_**
+# **_Bioinformatica y analisis genómicos reproducibles_**
+Tarea Sesión 1.2
+- Autor: Joaquín Ignacio Torres Núñez
+- Curso: Bioinformatics and Reproducible Genomic Analysis
+- Profesor: Ricardo Verdugo
+- Unidad 1 – Sesion 2
 
 ## **Ejercicio 1: Ejercicio: abre el el editor de Markdown de tu preferencia y escribe un texto en formato Markdown de manera que quede igual que los tres primeros puntos de Preparing the environment, cleaning the data for Stacks (incluyendo ese subtítulo). No es necesario poner los colores, pero si quieres, cool.**
 
