@@ -1,10 +1,10 @@
 # Tarea 1.2 BioinfRepro2026 JITN
 
 ## **Bioinformatics and Reproducible Genomic Analysis**
-Author: Joaquín Ignacio Torres Núñez
-Course: Bioinformatics and Reproducible Genomic Analysis
-Professor: Ricardo Verdugo
-Unit 1 – Session 2
+- Author: Joaquín Ignacio Torres Núñez
+- Course: Bioinformatics and Reproducible Genomic Analysis
+- Professor: Ricardo Verdugo
+- Unit 1 – Session 2
 
 ### **General Description**
 This repository contains the assignments and solutions for practical workflows in the Bioinformatics and Reproducible Genomic Analysis course. The main goal of this unit is to apply tools for creating and reproducing Markdown documents, manage repositories and version control via GitHub, and interpret and modularize scripts applied to genomic analysis.
