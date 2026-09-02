@@ -1,24 +1,30 @@
 # Tarea 1.2 BioinfRepro2026 JITN
 
-**Descripción general**
-Este repositorio contiene las tareas y soluciones de flujos de trabajo prácticos para el curso de *Bioinformática y análisis genómicos reproducibles*, sesion 2, unidad 1, realizadas por Joaquín Ignacio Torres Núñez. El objetivo principal de este aplicar herramientos y reproduccion de archivos markdown, uso de github.com y configuracion de repositorios, y finalmnente interpretacion y modularizacion de scrpits aplicados al análsiis genómico. 
+## **Bioinformatics and Reproducible Genomic Analysis**
+Author: Joaquín Ignacio Torres Núñez
+Course: Bioinformatics and Reproducible Genomic Analysis
+Professor: Ricardo Verdugo
+Unit 1 – Session 2
 
-**Contenido del repositorio**
-- **Ejercicio 1 (Markdown y manual de Stacks)**: Reproducción del manual de Stacks para `process_radtags`, aplicando títulos y subtitulos, aplicación de links, imágenes y códigos. 
-- **Ejercicios 2–5 (Git y configuración de repositorios)**: Inicialización del repositorio (`Tareas_BioinfRepro2026_JITN`), clonación de repositorios base y gestión de colaboradores para el usuario `ravuch`
-- **Ejercicio 6 (Análisis del flujo de trabajo en Stacks)**: Revisión de código e intrepretación de un pipeline de análisis basado en Stacks.
-- **Ejercicio 7 (Modularización de la pipeline)**: Divisíón del flujo de trabajo de Stacks en subscripts modulares. aplicados finalemnte a un script maestro.
+### **General Description**
+This repository contains the assignments and solutions for practical workflows in the Bioinformatics and Reproducible Genomic Analysis course. The main goal of this unit is to apply tools for creating and reproducing Markdown documents, manage repositories and version control via GitHub, and interpret and modularize scripts applied to genomic analysis.
 
-## Herramientas y dependencias
-Tutoriales:
--Repositorio curso Bioinformática y análisis genómicos reproducibles: https://github.com/u-genoma/BioinfinvRepro/blob/master/Unidad1/Sesion2/Sesion2_Organizacion_proyecto_bioinf.md
+### **Repository Contents**
+- Exercise 1: Markdown and Stacks manual reproduction of the Stacks manual for process_radtags, applying Markdown formatting through headings, subheadings, hyperlinks, images, and code blocks.
+- Exercises 2–5: Git and Repository configuration repository initialization (Tareas_BioinfRepro2026_JITN), cloning base repositories, and managing permissions/collaborators for user @ravuch.
+- Exercise 6: Stacks workflow analysis Code review and technical interpretation of a genomic data analysis pipeline based on Stacks.
+- Exercise 7: Pipeline modularization division of the Stacks workflow into modular subscripts, which are executed in an integrated manner using a master script.
+
+## Tools
+Tutorials:
+- Bioinformatics and Reproducible Genomic Analysis course repository: https://github.com/u-genoma/BioinfinvRepro/blob/master/Unidad1/Sesion2/Sesion2_Organizacion_proyecto_bioinf.md
 - Markdown: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 - Git: https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
-- GitHUb: https://docs.github.com/es/get-started/using-github/hello-world
+- GitHub: https://docs.github.com/es/get-started/using-github/hello-world
 - Stacks: https://catchenlab.life.illinois.edu/stacks/manual/#phand
 
-## Instrucciones de uso
-Para clonar este repositorio:
+## Usage instructions
+To clone this repository:
 
 ```
 git clone https://github.com/joaquintorresnunez/Tareas_BioinfRepro2026_JITN.git
