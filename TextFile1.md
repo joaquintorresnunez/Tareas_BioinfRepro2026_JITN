@@ -45,7 +45,8 @@ for (i in 1:10) {
 }
 ```
 
-###Ejercicio 5.2
+### Ejercicio 5.2
+```
 for (i in 1:10) {
   if (i %% 2 == 0) {
     next
@@ -53,8 +54,10 @@ for (i in 1:10) {
   x <- 35/i
   print(paste("El resultado de la división 35 /", i, "es igual a", x))
 }
+```
 
-###Ejercicio 5.3
+### Ejercicio 5.3
+```
 # 1. Crear un data frame vacío fuera del loop
 df_resultados <- data.frame()
 
@@ -69,20 +72,21 @@ for (i in 1:10) {
 }
 # 4. Mostrar la matriz resultante
 df_resultados
+```
+### Ejercicio 6
+#### ¿qué hacen los dos for loops del script?: 
+#### ¿qué paquetes necesitas para correr el script?: (ade4), (ggplop), (sp)
+#### ¿qué archivos necesitas para correr el script?: (read.fst_summary_fix.R), (read.effdist.R), (surveyed_mountains.tsv), (BerSS.sumstats.tsv), (Balpina_focalpoints.txt), 
 
-###Ejercicio 6
-#¿qué hacen los dos for loops del script?: 
-#¿qué paquetes necesitas para correr el script?: (ade4), (ggplop), (sp)
-#¿qué archivos necesitas para correr el script?: (read.fst_summary_fix.R), (read.effdist.R), (surveyed_mountains.tsv)
-#(BerSS.sumstats.tsv), (Balpina_focalpoints.txt), 
-
-###Ejercicio 7
+### Ejercicio 7
+```
 #Red Bananas
 calc.tetha=function(Ne, u){
   tetha=4*Ne*u
   return(tetha)
 }
+```
+### Ejercicio 8
 
-###Ejercicio 8
 #Elefante blanco
 
