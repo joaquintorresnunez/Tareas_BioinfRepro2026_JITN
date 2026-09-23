@@ -82,8 +82,37 @@ df_resultados
 ### Ejercicio 6 Abre en RStudio el script PracUni1Ses3/mantel/bin/1.IBR_testing.r. Este script realiza un análisis de aislamiento por resistencia con Fst calculadas con ddRAD en Berberis alpina. Lee el código del script y determina:
 
 #### ¿qué hacen los dos for loops del script?: 
-#### ¿qué paquetes necesitas para correr el script?: (ade4), (ggplop), (sp)
-#### ¿qué archivos necesitas para correr el script?: (read.fst_summary_fix.R), (read.effdist.R), (surveyed_mountains.tsv), (BerSS.sumstats.tsv), (Balpina_focalpoints.txt), 
+- El primer loop realiza un ciclo for a traves de los 13 vectores calculando para cada vector la matriz de distancia efectiva.
+````
+ for(i in c("present", "ccsm", "miroc", "flat", "1800", "2000", "2300", "2500", "2700", "3000", "3300", "3500", "4000")) {
+    
+    ## define resistances.out files
+    resfile <- paste0(circfolder, "/Balpina_", i, "_resistances.out")
+      
+    ### Get effective distances
+    
+    eff.dist<-read.effdist(file=resfile, popNames=popNamesFP, des.order=popNames)
+
+````
+- El segundo loop itera por cada vector calculando el test de mantel, donde compara la matriz de distancia ambiental (present, csm, miroc, etc) con la matriz genetica (B.FstLin)
+
+````
+ for(i in c("present", "ccsm", "miroc", "flat", "1800", "2000", "2300", "2500", "2700", "3000", "3300", "3500", "4000")) {
+  
+    print(paste("Results for", i))
+    
+    # Mantel test 
+    print("Mantel test")
+    x<-mantel.rtest(as.dist(get(paste0("B.",i))), as.dist(B.FstLin), nrepet=10000)
+    print(x)
+
+````
+
+
+#### ¿qué paquetes necesitas para correr el script?: 
+- (ade4), (ggplop), (sp)
+#### ¿qué archivos necesitas para correr el script?: 
+- (read.fst_summary_fix.R), (read.effdist.R), (surveyed_mountains.tsv), (BerSS.sumstats.tsv), (Balpina_focalpoints.txt), 
 
 ### Ejercicio 7 Escribe una función llamada calc.tetha que te permita calcular tetha dados Ne y u como argumentos. Recuerda que tetha =4Neu.
 ```
@@ -95,6 +124,7 @@ calc.tetha=function(Ne, u){
 ```
 ### Ejercicio 8 Al script del ejercicio de las pruebas de Mantel, agrega el código necesario para realizar un Partial Mantel test entre la matriz Fst, y las matrices del presente y el LGM, parcializando la matriz flat. Necesitarás el paquete vegan. Include the comment: Elefante blanco
 
+```
 ## Alicia Mastretta Yanes
 ## Perform Mantel tests with different resistance surfaces to test for IBR in B. alpina
 #Partial mantel test permite el analisi de 3 matrices, a diferencia de mantel test. estima la correlacion de 2 matrices (A y B), mientras se controla el efecto de la matriz C. Se suele utilizar como matriz C una atriz de distancia derivado de un parametro ambiental. 
@@ -244,9 +274,16 @@ print(res_miroc)
 ## session info
 sessionInfo()
 
+```
+
 ### Ejercicio 9 Escribe un script que debe estar guardado en PracUni1Ses3/maices/bin y llamarse ExplorandoMaiz.R, que 1) cargue en R el archivo PPracUni1Ses3maices/meta/maizteocintle_SNP50k_meta_extended.txt y 2) responda lo siguiente.
 
-#ExplorandoMaiz.r
+# ==============================================================================
+# Script: ExplorandoMaiz.R
+# Ubicación: PracUni1Ses3/maices/bin/ExplorandoMaiz.R
+# Autor: Joaquín Ignacio Torres Núñez
+# Descripción: Carga y exploración de metadatos de maíz y teocintle
+# ==============================================================================
 ```
 library(dplyr)
 maiz.data=read.delim("./BioinfinvRepro-master/BioinfinvRepro-master/Unidad1/Sesion3/PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt")
