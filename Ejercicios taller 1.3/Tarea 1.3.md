@@ -315,6 +315,10 @@ library(readr)
 
 write_csv(df_mix, "./BioinfinvRepro-master/BioinfinvRepro-master/Unidad1/Sesion3/PracUni1Ses3/maices/meta/submatJT.csv")
 ```
+### Ejercicio 10 
+
+
+## Conclusion
 
 
 
