@@ -278,12 +278,12 @@ sessionInfo()
 
 ### Ejercicio 9 Escribe un script que debe estar guardado en PracUni1Ses3/maices/bin y llamarse ExplorandoMaiz.R, que 1) cargue en R el archivo PPracUni1Ses3maices/meta/maizteocintle_SNP50k_meta_extended.txt y 2) responda lo siguiente.
 
-# ==============================================================================
-# Script: ExplorandoMaiz.R
-# Ubicación: PracUni1Ses3/maices/bin/ExplorandoMaiz.R
-# Autor: Joaquín Ignacio Torres Núñez
-# Descripción: Carga y exploración de metadatos de maíz y teocintle
-# ==============================================================================
+## ==============================================================================
+## Script: ExplorandoMaiz.R
+## Ubicación: PracUni1Ses3/maices/bin/ExplorandoMaiz.R
+## Autor: Joaquín Ignacio Torres Núñez
+## Descripción: Carga y exploración de metadatos de maíz y teocintle
+## ==============================================================================
 ```
 library(dplyr)
 maiz.data=read.delim("./BioinfinvRepro-master/BioinfinvRepro-master/Unidad1/Sesion3/PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt")
@@ -353,6 +353,7 @@ library(readr)
 write_csv(df_mix, "./BioinfinvRepro-master/BioinfinvRepro-master/Unidad1/Sesion3/PracUni1Ses3/maices/meta/submatJT.csv")
 ```
 ### Ejercicio 10 
+El resultado del Ejercicio 10 se encuentra en [Wiki sesion 1.3] (https://github.com/joaquintorresnunez/Tareas_BioinfRepro2026_JITN/wiki/Notas-sesion-1.3)
 
 
 ## Conclusion
