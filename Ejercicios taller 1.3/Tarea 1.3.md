@@ -155,7 +155,7 @@ sessionInfo()
 
 ### Ejercicio 9 Escribe un script que debe estar guardado en PracUni1Ses3/maices/bin y llamarse ExplorandoMaiz.R, que 1) cargue en R el archivo PPracUni1Ses3maices/meta/maizteocintle_SNP50k_meta_extended.txt y 2) responda lo siguiente.
 
-1. Script ExplorandoMaiz.R disponible en Ejercicios taller 1.3/PracUni1Ses3/maices/bin
+1. Script ExplorandoMaiz.R disponible en [Ejercicios taller 1.3/PracUni1Ses3/maices/bin](https://github.com/joaquintorresnunez/Tareas_BioinfRepro2026_JITN/blob/0d0fe3a3bc3848bd2bcf524302b7f75dfa6ad2df/Ejercicios%20taller%201.3/PracUni1Ses3/maices/bin/Explorandomaiz.R)
 ```
 library(dplyr)
 maiz.data=read.delim("./BioinfinvRepro-master/BioinfinvRepro-master/Unidad1/Sesion3/PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt")
