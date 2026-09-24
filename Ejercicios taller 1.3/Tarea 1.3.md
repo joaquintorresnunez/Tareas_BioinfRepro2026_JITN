@@ -288,56 +288,73 @@ sessionInfo()
 library(dplyr)
 maiz.data=read.delim("./BioinfinvRepro-master/BioinfinvRepro-master/Unidad1/Sesion3/PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt")
 ```
-- ¿Qué tipo de objeto creamos al cargar la base?
-#funcion class entrega el tipo de archivo creado
-```
-class(maiz.data)
-```
-- ¿Cómo se ven las primeras 6 líneas del archivo?
-#función head entrega por defecto las primeras 6 filas, si se quisiera seleccionar mas filas se agrega head(...,numero de filas)
+- ¿Qué tipo de objeto creamos al cargar la base?: Entrega un data.frame
+- ¿Cómo se ven las primeras 6 líneas del archivo?: función head entrega por defecto las primeras 6 filas, si se quisiera seleccionar mas filas se agrega head(...,numero de filas)
 ```
 head(maiz.data,6)
 ```
-- ¿Cuántas muestras hay?
-#paquete de dplyr, entrega en numero total de filas
-```
-count(maiz.data)
-```
-- ¿De cuántos estados se tienen muestras?
-#data: La tabla de datos (data frame) con la que vas a trabajar.sintaxis es (.data,), se agrega la columna o lista de columnas por las cuales quieres agrupar y contar.
-```
-count(maiz.data, Estado)
-nrow(count(maiz.data, Estado))
-```
-- ¿Cuántas muestras fueron colectadas antes de 1980?
-#muestra el numero de filas >1980 en su año de colecta, crea un data frame, TRUE es el valor que se busca)
-```
-count(maiz.data,A.o._de_colecta<1980)
-```
-- ¿Cuántas muestras hay de cada raza?
-#Se indica cuentas muestras hay de cada raza
-```
-count(maiz.data,Raza)
-```
-- En promedio ¿a qué altitud fueron colectadas las muestras?
-#Promedio de alturas, summarise() permite realizar calculos arimeticos a columnas definidas
-```
-count(maiz.data,Altitud)
-?summarise
-summarise(maiz.data,mean(Altitud, na.rm = TRUE))
-```
-- ¿Y a qué altitud máxima y mínima fueron colectadas?
-```
-#maximos y minimos
-summarise(maiz.data,paste('La altitud máxima es:',max(Altitud, na.rm = TRUE)))  
-summarise(maiz.data,paste('La altitud mínima es:',min(Altitud, na.rm = TRUE)))
-```
-- Crea una nueva df de datos sólo con las muestras de la raza Olotillo
-#nuevo data frame
+- ¿Cuántas muestras hay?: paquete de dplyr, entrega en numero total de filas, son en total 165 muestras
+- ¿De cuántos estados se tienen muestras?: 19 estados.
+- ¿Cuántas muestras fueron colectadas antes de 1980?: 8 muestars recolectadas antes de 1980.
+- ¿Cuántas muestras hay de cada raza?:
+                          Raza  n
+1                        Ancho  3
+2                     Apachito  2
+3                    Arrocillo  4
+4                         Azul  2
+5             Blando de Sonora  1
+6                         Bofo  1
+7                Cacahuacintle  5
+8                       Celaya  3
+9                     Chalque̱o  7
+10                   Chapalote  2
+11                    Comiteco  5
+12 Complejo Serrano de Jalisco  2
+13                      Conejo  4
+14                Coscomatepec  3
+15     Cristalino de Chihuahua  2
+16                  C\xcc_nico 16
+17           C\xcc_nico Norte̱o  3
+18                       Dulce  1
+19       Dulcillo del Noroeste  2
+20                  Dzit-Bacal  3
+21          Elotero de Sinaloa  5
+22          Elotes C\xcc_nicos 14
+23         Elotes Occidentales  4
+24                       Gordo  2
+25                        Jala  4
+26                     Mushito  3
+27           Nal-tel de Altura  5
+28                    Olotillo  6
+29                  Olot\xcc_n  4
+30                      Onave̱o  2
+31           Palomero Toluque̱o  1
+32       Palomero de Chihuahua  1
+33                   Pepitilla  4
+34                   Rat\xcc_n  3
+35                  Reventador  2
+36            Tablilla de Ocho  2
+37                 Tabloncillo  4
+38           Tabloncillo Perla  3
+39                       Tehua  2
+40                  Tepecintle  4
+41                      Tuxpe̱o  4
+42               Tuxpe̱o Norte̱o  2
+43                      Vande̱o  4
+44           Zamorano Amarillo  3
+45              Zapalote Chico  1
+46             Zapalote Grande  1
+47             Zea m. mexicana  2
+48          Zea m. parviglumis  2
+
+- En promedio ¿a qué altitud fueron colectadas las muestras?: altitud media  1519.242
+- ¿Y a qué altitud máxima y mínima fueron colectadas?: La altitud máxima es: 2769,  La altitud mínima es: 5
+z.data,paste('La altitud mínima es:',min(Altitud, na.rm = TRUE)))
+
+- Crea una nueva df de datos sólo con las muestras de la raza Olotillo:
 ```
 df_olotillo = filter(maiz.data, Raza == "Olotillo")
 ```
-
 - Crea una nueva df de datos sólo con las muestras de la raza Reventador, Jala y Ancho
 #nuevo data frame de mas de 1 raza
 ```
