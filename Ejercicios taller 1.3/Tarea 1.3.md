@@ -171,7 +171,7 @@ head(maiz.data,6)
 - ¿De cuántos estados se tienen muestras?: 19 estados.
 - ¿Cuántas muestras fueron colectadas antes de 1980?: 8 muestars recolectadas antes de 1980.
 - ¿Cuántas muestras hay de cada raza?:
-  | # | Raza | n |
+ | # | Raza | n |
 | :---: | :--- | ---: |
 | 1 | Ancho | 3 |
 | 2 | Apachito | 2 |
