@@ -14,7 +14,7 @@ Tarea Sesión 1.3
 - Manipular metadata con paquetes en R
 - Aplicar anotaciones de códigos y manejo de sripts en R.
 
-## Ejercicio 1 crea una variable con el logaritmo base 10 de 50 y súmalo a otra variable cuyo valor sea igual a 5.
+## Ejercicio 1: Crea una variable con el logaritmo base 10 de 50 y súmalo a otra variable cuyo valor sea igual a 5.
 ````
 log
 x=log10(50)
@@ -22,21 +22,21 @@ y=5
 z=x + y
 print(z)
 ````
-## Ejercicio 2 suma el número 2 a todos los números entre 1 y 150.
+## Ejercicio 2: Suma el número 2 a todos los números entre 1 y 150.
 ```
 x=(1:150)
 y=x+2
 print(y)
 ```
 
-## Ejercicio 3 ¿cuántos números son mayores a 20 en el vector -13432:234?
+## Ejercicio 3: ¿Cuántos números son mayores a 20 en el vector -13432:234?
 ```
 ?sum
 vector=c(-13432:234)
 sum(vector>20)
 ```
 
-## Ejercicio 4 Carga en R el archivo PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt y ponlo en un objeto de R llamado meta_maiz.
+## Ejercicio 4: Carga en R el archivo PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt y ponlo en un objeto de R llamado meta_maiz.
 ```
 getwd()
 ?read.delim
@@ -44,8 +44,8 @@ getwd()
 meta_maiz <- read.delim("./BioinfinvRepro-master/BioinfinvRepro-master/Unidad1/Sesion3/PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt")
 ````
 
-## Ejercicio 5 
-### Ejercicio 5.1 Escribe un for loop para que divida 35 entre 1:10 e imprima el resultado en la consola.
+## Ejercicio 5: 
+### Ejercicio 5.1: Escribe un for loop para que divida 35 entre 1:10 e imprima el resultado en la consola.
 ```
 for (i in 1:10) {
   x = 35/i
@@ -53,7 +53,7 @@ for (i in 1:10) {
 }
 ```
 
-### Ejercicio 5.2 Modifica el loop anterior para que haga las divisiones solo para los números nones (con un comando, NO con c(1,3,...)). Pista: next.
+### Ejercicio 5.2: Modifica el loop anterior para que haga las divisiones solo para los números nones (con un comando, NO con c(1,3,...)). Pista: next.
 ```
 for (i in 1:10) {
   if (i %% 2 == 0) {
@@ -64,7 +64,7 @@ for (i in 1:10) {
 }
 ```
 
-### Ejercicio 5.3 Modifica el loop anterior para que los resultados de correr todo el loop se guarden en una df de dos columnas, la primera debe tener el texto "resultado para x" (donde x es cada uno de los elementos del loop) y la segunda el resultado correspondiente a cada elemento del loop. Pista: el primer paso es crear un vector fuera del loop. Ejemplo:
+### Ejercicio 5.3: Modifica el loop anterior para que los resultados de correr todo el loop se guarden en una df de dos columnas, la primera debe tener el texto "resultado para x" (donde x es cada uno de los elementos del loop) y la segunda el resultado correspondiente a cada elemento del loop. Pista: el primer paso es crear un vector fuera del loop. Ejemplo:
 ```
 # 1. Crear un data frame vacío fuera del loop
 df_resultados <- data.frame()
@@ -81,7 +81,7 @@ for (i in 1:10) {
 # 4. Mostrar la matriz resultante
 df_resultados
 ```
-### Ejercicio 6 Abre en RStudio el script PracUni1Ses3/mantel/bin/1.IBR_testing.r. Este script realiza un análisis de aislamiento por resistencia con Fst calculadas con ddRAD en Berberis alpina. Lee el código del script y determina:
+### Ejercicio 6: Abre en RStudio el script PracUni1Ses3/mantel/bin/1.IBR_testing.r. Este script realiza un análisis de aislamiento por resistencia con Fst calculadas con ddRAD en Berberis alpina. Lee el código del script y determina:
 
 #### ¿qué hacen los dos for loops del script?: 
 - El primer loop realiza un ciclo for a traves de los 13 vectores calculando para cada vector la matriz de distancia efectiva.
@@ -110,13 +110,12 @@ df_resultados
 
 ````
 
-
 #### ¿qué paquetes necesitas para correr el script?: 
 - (ade4), (ggplop), (sp)
 #### ¿qué archivos necesitas para correr el script?: 
 - (read.fst_summary_fix.R), (read.effdist.R), (surveyed_mountains.tsv), (BerSS.sumstats.tsv), (Balpina_focalpoints.txt), 
 
-### Ejercicio 7 Escribe una función llamada calc.tetha que te permita calcular tetha dados Ne y u como argumentos. Recuerda que tetha =4Neu.
+### Ejercicio 7: Escribe una función llamada calc.tetha que te permita calcular tetha dados Ne y u como argumentos. Recuerda que tetha =4Neu.
 ```
 #Red Bananas
 calc.tetha=function(Ne, u){
@@ -124,7 +123,7 @@ calc.tetha=function(Ne, u){
   return(tetha)
 }
 ```
-### Ejercicio 8 Al script del ejercicio de las pruebas de Mantel, agrega el código necesario para realizar un Partial Mantel test entre la matriz Fst, y las matrices del presente y el LGM, parcializando la matriz flat. Necesitarás el paquete vegan. Include the comment: Elefante blanco
+### Ejercicio 8: Al script del ejercicio de las pruebas de Mantel, agrega el código necesario para realizar un Partial Mantel test entre la matriz Fst, y las matrices del presente y el LGM, parcializando la matriz flat. Necesitarás el paquete vegan. Include the comment: Elefante blanco
 
 ```
 ## Alicia Mastretta Yanes
@@ -155,7 +154,7 @@ sessionInfo()
 
 ```
 
-### Ejercicio 9 Escribe un script que debe estar guardado en PracUni1Ses3/maices/bin y llamarse ExplorandoMaiz.R, que 1) cargue en R el archivo PPracUni1Ses3maices/meta/maizteocintle_SNP50k_meta_extended.txt y 2) responda lo siguiente.
+### Ejercicio 9: Escribe un script que debe estar guardado en PracUni1Ses3/maices/bin y llamarse ExplorandoMaiz.R, que 1) cargue en R el archivo PPracUni1Ses3maices/meta/maizteocintle_SNP50k_meta_extended.txt y 2) responda lo siguiente.
 
 1. Script ExplorandoMaiz.R disponible en [Ejercicios taller 1.3/PracUni1Ses3/maices/bin](https://github.com/joaquintorresnunez/Tareas_BioinfRepro2026_JITN/blob/0d0fe3a3bc3848bd2bcf524302b7f75dfa6ad2df/Ejercicios%20taller%201.3/PracUni1Ses3/maices/bin/Explorandomaiz.R)
 ```
@@ -244,7 +243,7 @@ library(readr)
 
 write_csv(df_mix, "./BioinfinvRepro-master/BioinfinvRepro-master/Unidad1/Sesion3/PracUni1Ses3/maices/meta/submatJT.csv")
 ```
-### Ejercicio 10 
+### Ejercicio 10: 
 El resultado del Ejercicio 10 se encuentra en [Wiki sesion 1.3] (https://github.com/joaquintorresnunez/Tareas_BioinfRepro2026_JITN/wiki/Notas-sesion-1.3)
 
 
