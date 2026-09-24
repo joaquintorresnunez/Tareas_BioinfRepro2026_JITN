@@ -6,6 +6,14 @@ Tarea Sesión 1.3
 - Profesor: Ricardo Verdugo
 - Unidad 1 – Sesion 3
 
+## Objetivo general:
+- Desarrollar habilidades fundamentales de programación en R y aplicar metodologías bioinformáticas para la manipulación y análisis estadístico de datos.
+
+## Objetivos específicos:
+- Implementar ciclos iterativos y funciones personalizadas en R.
+- Manipular metadata con paquetes en R
+- Aplicar anotaciones de códigos y manejo de sripts en R.
+
 ## Ejercicio 1 crea una variable con el logaritmo base 10 de 50 y súmalo a otra variable cuyo valor sea igual a 5.
 ````
 log
@@ -154,7 +162,7 @@ sessionInfo()
 library(dplyr)
 maiz.data=read.delim("./BioinfinvRepro-master/BioinfinvRepro-master/Unidad1/Sesion3/PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt")
 ```
-2. 
+2. Responda lo siguiente:  
 - ¿Qué tipo de objeto creamos al cargar la base?: Entrega un data.frame
 - ¿Cómo se ven las primeras 6 líneas del archivo?: función head entrega por defecto las primeras 6 filas, si se quisiera seleccionar mas filas se agrega head(...,numero de filas)
 ```
