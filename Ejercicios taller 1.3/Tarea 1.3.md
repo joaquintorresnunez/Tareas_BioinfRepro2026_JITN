@@ -36,13 +36,7 @@ getwd()
 meta_maiz <- read.delim("./BioinfinvRepro-master/BioinfinvRepro-master/Unidad1/Sesion3/PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt")
 ````
 
-## Ejercico 5 
-### ejemplo
-```
-for (i in 2:10){
-  print(paste(i, "elefantes se columpiaban sobre la tela de una araña"))
-}
-```
+## Ejercicio 5 
 ### Ejercicio 5.1 Escribe un for loop para que divida 35 entre 1:10 e imprima el resultado en la consola.
 ```
 for (i in 1:10) {
@@ -247,7 +241,7 @@ El resultado del Ejercicio 10 se encuentra en [Wiki sesion 1.3] (https://github.
 
 
 ## Conclusion
-
+En esta sesión se consolidaron las bases de la programación en R y el análisis genómico reproducible a través del desarrollo de scripts, la creación de funciones personalizadas y la manipulación de datos con dplyr. Asimismo, se abordaron metodologías clave en genética de poblaciones mediante la ejecución e interpretación de pruebas de Mantel y Mantel Parcial utilizando el paquete vegan. En conjunto, la resolución de estos ejercicios integró el procesamiento de datos biológicos con el uso de código anotado, una estructura clara de trabajo y la documentación en GitHub, elementos esenciales para garantizar la transparencia y la reproducibilidad científica. Dentro de los mayores desafíos al realizar dicha tarea destacaron la interpretación y comprensión de pruebas estadísticas asociadas al análisis de poblaciones, en conjunto con los ciclos de iteración; esto demandó un análisis más profundo del código utilizado, lo que a su vez permitió un mejor entendimiento de scripts más complejos.
 
 
 
