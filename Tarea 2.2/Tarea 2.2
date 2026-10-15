@@ -1,0 +1,66 @@
+Tarea 2.
+
+1. ¿Cómo se llaman los archivos que contienen las tasas de datos perdidos por SNP y por muestra?
+PLINK --miss
+
+2. ¿Cuántas variantes se eliminaron por tener una tasa de datos perdidos mayor a 0.2?
+Se eliminaron 4,680 variantes (SNPs) por tener una tasa de datos perdidos mayor al 20% (--geno 0.2).
+
+Desglose de los resultados de tu ejecución:
+
+    Variantes iniciales: 813,366
+
+    Variantes eliminadas: 4,680
+
+    Variantes finales retenidas: 808,686
+
+    Muestras conservadas: 48 (no se aplicó filtrado de individuos --mind en este paso)
+
+    Tasa global de genotipado: 98.98%
+
+3. 
+Se eliminaron 0 personas (muestras) al aplicar el filtro de tasa de datos perdidos del 2% (--mind 0.02). Todas las muestras pasaron el control de calidad.
+
+Resumen del resultado de la ejecución:
+
+    Muestras iniciales: 48
+
+    Muestras eliminadas: 0
+
+    Tasa total de genotipado: 100% (Total genotyping rate is exactly 1)
+
+    Variantes retenidas: 574,624 de 574,624
+
+    Muestras finales retenidas: 48
+
+4. 
+0.02 (2%) o 0.05 (5%). Esto demuestra que la inmensa mayoría del array o panel tiene excelente cobertura. Un filtro más estricto de 0.02 o 0.05 removerá las variantes ruidosas o con fallos de hibridación/llamado de alelos sin perder densidad genómica significativa, 
+lo cual es ideal para análisis poblacionales (PCA, estructura, LD pruning).
+
+Sugerencia: 0.02 (2%) o 0.05 (5%). Al aplicar --mind 0.02, 0 de los 48 individuos fueron eliminados, manteniendo una tasa de genotipado del 100% en ese paso.Al ser una cohorte pequeña ($N = 48$), es crítico conservar la mayor cantidad de individuos posible. Un umbral de 0.02 a 0.05 es lo suficientemente estricto para detectar muestras atípicas 
+(por ejemplo, con ADN degradado o fallas en el chip) sin descartar datos válidos.
+
+Corroboración  de sexos: Se detectaron 3 discrpancias, se eliminaron 3 individuos por discrpancias de sexo:
+ARI022 ARI022
+CDSJ176 CDSJ176
+CDSJ118 CDSJ118
+
+No eliminar las muestras con discrepancia de sexo compromete severamente la validez de todo el estudio genómico. Los principales riesgos son:
+
+    1. Intercambio de muestras en el laboratorio o base de datos (Sample Swaps):
+    Es la causa más común. Si la muestra A (mujer) se etiquetó como B (hombre), estarías asociando los datos genómicos de un individuo con el fenotipo o la historia clínica de otro totalmente distinto.
+
+    2. Falsos positivos en GWAS o análisis de asociación:
+    En estudios de asociación genómica amplia (GWAS) —especialmente en análisis estratificados por sexo o en rasgos ligados al sexo—, incluir individuos mal clasificados genera asociaciones espurias (falsas) y reduce la potencia estadística.
+
+    3. Presencia de contaminación cruzada de ADN:
+    Si la muestra contiene ADN mezclado de un hombre y una mujer, el cromosoma X mostrará niveles de heterocigosis anómalos. Mantener muestras contaminadas introduce ruido y genotipos erróneos en el dataset.
+
+    4. Distorsión en PCA, parentesco y estructura poblacional:
+    Muestras contaminadas o con aneuploidías cromosómicas sexuales no detectadas (como síndrome de Klinefelter XXY o Turner X0) actúan como valores atípicos (outliers) severos, sesgando los Componentes Principales (PCA) y la matriz de parentesco (kinship / IBD).
+
+    5. Sesgo en estimaciones de frecuencias alélicas:
+    Altera los cálculos del equilibrio de Hardy-Weinberg (HWE) y las frecuencias de alelos en las regiones pseudoautosómicas y los cromosomas sexuales.
+
+
+quedamos en el paso 3

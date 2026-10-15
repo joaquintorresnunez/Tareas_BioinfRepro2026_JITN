@@ -1,0 +1,55 @@
+# 1. Definir el directorio de trabajo en la carpeta Descargas
+# (Usa "~/Downloads" si tu sistema operativo está en inglés)
+setwd("~/Descargas")
+
+# 2. Cargar y preparar los datos (se ejecuta solo una vez)
+data <- read.table(file="MDS_merge2.mds", header=TRUE)
+race <- read.table(file="ethnicityfile.txt", header=TRUE)
+datafile <- merge(data, race, by=c("IID"))
+
+# 3. Asignar colores y formas (pch) por etnia
+datafile$color <- sapply(as.character(datafile$ethnicity), switch,
+                         EUR="blue",
+                         ASN="yellow4",
+                         AMR="brown",
+                         AFR="green",
+                         AYM="orange",
+                         MAP="darkgreen")
+
+datafile$pch <- ifelse(datafile$ethnicity %in% c("AYM", "MAP"), 3, 1)
+
+
+# =========================================================
+# OPCIÓN A: Guardar los 3 gráficos en archivos PDF separados
+# =========================================================
+
+# --- Gráfico 1: Componente 1 vs Componente 2 ---
+pdf("MDS_1vs2.pdf", width=7, height=7)
+plot(datafile[,4], datafile[,5], type="p", 
+     xlab="MDS Component 1", ylab="MDS Component 2", 
+     main="MDS Component 1 vs 2", pch=datafile$pch, cex=0.5, col=datafile$color)
+legend("topright", pch=c(1,1,1,1,3,3), 
+       legend=c("EUR","ASN","AMR","AFR","AYM","MAP"), 
+       col=c("blue","yellow4","brown","green","orange","darkgreen"), bty="o", cex=0.8)
+dev.off() # Cierra y guarda el archivo PDF
+
+# --- Gráfico 2: Componente 2 vs Componente 3 ---
+pdf("MDS_2vs3.pdf", width=7, height=7)
+plot(datafile[,5], datafile[,6], type="p", 
+     xlab="MDS Component 2", ylab="MDS Component 3", 
+     main="MDS Component 2 vs 3", pch=datafile$pch, cex=0.5, col=datafile$color)
+legend("topright", pch=c(1,1,1,1,3,3), 
+       legend=c("EUR","ASN","AMR","AFR","AYM","MAP"), 
+       col=c("blue","yellow4","brown","green","orange","darkgreen"), bty="o", cex=0.8)
+dev.off()
+
+# --- Gráfico 3: Componente 3 vs Componente 4 ---
+pdf("MDS_3vs4.pdf", width=7, height=7)
+plot(datafile[,6], datafile[,7], type="p", 
+     xlab="MDS Component 3", ylab="MDS Component 4", 
+     main="MDS Component 3 vs 4", pch=datafile$pch, cex=0.5, col=datafile$color)
+legend("topright", pch=c(1,1,1,1,3,3), 
+       legend=c("EUR","ASN","AMR","AFR","AYM","MAP"), 
+       col=c("blue","yellow4","brown","green","orange","darkgreen"), bty="o", cex=0.8)
+dev.off()
+
