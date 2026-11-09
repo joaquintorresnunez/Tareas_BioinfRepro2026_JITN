@@ -6,6 +6,8 @@ Joaquín Torres Nuñez
 
 Profesor: Ricardo Verdugo
 
+30/09/2026
+
 ---
 
 ## 1. Realizar las siguientes tareas tanto para las secuencias crudas y podadas. Además de generar los informes de calidades deben realizar una comparación de los resultados. Recuerden que la ubicación de las secuencias crudas es en el directorio: 181004_curso_calidad_datos_NGS/fastq_raw/ y las secuencias ya podadas se encuentran en 181004_curso_calidad_datos_NGS/fastq_filter
@@ -89,7 +91,7 @@ Tanto "Per tile sequence quality", como "Per sequence quality scores" aprobaron 
 - S14_R2_filterfastqc:  La longitud de lectura pasó de ser fija a un rango de 35 a 251 pares de bases. Esto generó una advertencia (WARNING) en el módulo Sequence Length Distribution, lo cual es el comportamiento esperado tras aplicar algoritmos de recorte por calidad o remoción de adaptadores. Adapter Content, al igual que S14_R1_filter aprobó lo que indica una correcta remoción de adaptadores. Respecto a "Per base sequence quality" se observá una mejora en la caldiad de las lecturas, aprobando este indicador. Tras el filtrado, el archivo conserva un total de 8,038 secuencias (~1.6 Mbp) con 0 secuencias marcadas como deficientes (poor quality).
 
 5. Compare los valores calculados en el punto 1 con lo entregado en el informe de calidad obtenido con FastQC
-- número de lecturas:  
+- Número de lecturas:  
 S14_R1_fastqc comandos UNIX: 10209 reads
 S14_R1_fastqc FASTQC: 10209 reads
 S14_R2_fastqc comandos UNIX:10209  reads
@@ -102,18 +104,20 @@ No se evidencia cambios en el número de reads entre comandos Unix y programa Fa
 
 - Calidad de las secuencias
 **Secuencia S14_fastqc primeras 10 bases:** 
-S14_R1: ACTAAGGAAC
-S14_R2: ATCTATATTC
-Qscores S14_R1_fastqc: EEEEEFFFFF
-Qscores S14_R2_fastqc: ABCCCFFFFF
+- S14_R1: ACTAAGGAAC
+- S14_R2: ATCTATATTC
+- Qscores S14_R1_fastqc: EEEEEFFFFF
+- Qscores S14_R2_fastqc: ABCCCFFFFF
 
 **Qscores en informe de calidad FastQC**
-S14_R1_fastqc: 34/34/34/35/35/36/36/36/37
-S14_R2_fastqc: 33/33/34//34/34/36/36/36/37
+- S14_R1_fastqc: 34/34/34/35/35/36/36/36/37
+
+- S14_R2_fastqc: 33/33/34//34/34/36/36/36/37
 
 **Qscores de secuencias filtradas en informe de calidad FastQC**
-S14_R1_filter_fastqc: 34/34/34/35/35/36/36/36/36/37
-S14_R2_filter_fastqc: 34/34/34/34/34/36/36/36/36/37
+- S14_R1_filter_fastqc: 34/34/34/35/35/36/36/36/36/37
+
+- S14_R2_filter_fastqc: 34/34/34/34/34/36/36/36/36/37
 
 Respuesta: **No hubo una variación del número de reads ni de los Phred scores entre el analisis de Qscores realizado por comandos Unix, y el análsis efectuado por FastQc.**  
 
@@ -143,9 +147,9 @@ a. Per base sequence quality: Esta figura muestra la distribución del puntaje P
 
 ### Interpretación y Comparación:
 * **Secuencias Crudas (Raw):** 
-  * **R1, R2** presentan 2 peaks de distitna intensidad. El peak cercano al Qscore=27-28 indica la presencia de bases de mala calidad, lo cual es esperable dado que aun no son sometidas al trimming.
+  * **R1, R2** presentan 2 peaks de distitna intensidad. El peak cercano al $Qscore=27-28$ indica la presencia de bases de mala calidad, lo cual es esperable dado que aun no son sometidas al trimming.
 * **Secuencias Podadas (Filter):** 
-  * Tras el filtrado, desaparece el peak observado con Qscore de 27-28 y curvas se vuelven homogeneas con una clara predominancia de las secuencias Q>30.
+  * Tras el filtrado, desaparece el peak observado con $Qscore=27-28$ y curvas se vuelven homogeneas con una clara predominancia de las secuencias Q>30.
 
 ---
 
@@ -160,7 +164,7 @@ a. Per base sequence quality: Esta figura muestra la distribución del puntaje P
 * **Secuencias Crudas (Raw):** 
   * Tanto en Secuencias R1 como R2 se observa una mayor heterogeneidad en la distribucipon de bases nucleotidicas.
 * **Secuencias Podadas (Filter):** 
-  * Al cortar las secuencias  y retirar secuencais de mala caldiad las proporciones de nucleótidos a lo largo del cuerpo de la lectura se estabilizan y corren paralelas. 
+  * Al cortar las secuencias  y retirar secuencais de mala calidad las proporciones de nucleótidos a lo largo del cuerpo de la lectura se estabilizan y corren paralelas. 
 
 ---
 
@@ -180,4 +184,4 @@ a. Per base sequence quality: Esta figura muestra la distribución del puntaje P
 
 ## Conclusión 
 
-El control de calidad se consolida como una etapa previa fundamental e insustituible en cualquier flujo de trabajo genómico. La omisión o aplicación deficiente de este paso introduce artefactos técnicos, tales como lecturas con baja calidad Phred, capaces de alterar drásticamente los análisis de llos datos, derivando en resultados erroneos. Un análsis correcto de caldiad de las secuencias permitirá obtener resultados útiles para la comunidad cientifica, aspi como ensayos reproducibles, objetivos centrales de este curso. Por su parte, el software FastQC destaca como una herramienta de gran relevancia el análisis preliminar de datos NGS. Su capacidad para condensar millones de secuencias en métricas y visualizaciones gráficas facilita una revision dirigida de los datos, permitiendo identificar errores en la calidad de nuestras secuencias. Destaco de igual forma de esta tarea la experiencia de trabajar en servidores remotos, experiencia que aporta en ganar experiencia y herramientas en el trabajo de datos en bioinformática. 
+El control de calidad se consolida como una etapa previa fundamental e insustituible en cualquier flujo de trabajo genómico. La omisión o aplicación deficiente de este paso introduce artefactos técnicos, tales como lecturas con baja calidad Phred, capaces de alterar drásticamente los análisis de llos datos, derivando en resultados erroneos. Un análsis correcto de caldiad de las secuencias permitirá obtener resultados útiles para la comunidad cientifica, aspi como ensayos reproducibles, objetivos centrales de este curso. Por su parte, el software FastQC destaca como una herramienta de gran relevancia el análisis preliminar de datos NGS. Su capacidad para condensar millones de secuencias en métricas y visualizaciones gráficas facilita una revision dirigida de los datos, permitiendo identificar errores en la calidad de nuestras secuencias. Destaco de igual forma de esta tarea la experiencia de trabajar en servidores remotos, elemento que aporta en experiencia y herramientas en el trabajo de datos en bioinformática. 

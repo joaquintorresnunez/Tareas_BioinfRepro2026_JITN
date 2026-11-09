@@ -527,11 +527,11 @@ En R, genere gráficos similares para las combinaciones Component 2 vs 3 y 3 vs 
 
 Se exporto archivos MDS_merge2.mds y ethnicityfile.txt, en conjunto con la modificación en el script MDS_merged.r en carpeta ~/WK2019-PopGeno.
 
-[Ver gráfico MDS Componente 2 vs 3](MDS_2vs3.pdf)
+![Ver gráfico MDS Componente 2 vs 3](mds2.png)
 
 Al analizar este grafico destaca una similitud de componentes Aymaras y Mapuches, separados de componentes europeos y asiáticos. 
 
-[Ver gráfico MDS Componente 3 vs 4](MDS_3vs4.pdf)
+![Ver gráfico MDS Componente 2 vs 3](mds3.png)
 
 Al analziar este grafico se evidencia la separaión de 2 subgrupos europeos, lo que podria ser explciado por diferencias geográficas de los individuos.
 
